@@ -33,6 +33,7 @@ body {
     background-color: var(--Red);
     font-family: var(--Poppins);
     font-size: 16px;
+    background-image: url("../images/bg-intro-mobile.png");
 }
 
 .text-area {
