@@ -2,13 +2,36 @@
 
 :root {
   /* colors */
-    --red: hsl(0, 100%, 74%);
-    --green: hsl(154, 59%, 51%);
-    --Blue: hsl(248, 32%, 49%);
-    --DarkBlue: hsl(249, 10%, 26%);
-    --GrayishBlue: hsl(246, 25%, 77%);
-    --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --DarkGreen: hsl(154, 41%, 50%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+  --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
+  --DarkGray: hsl(247, 7%, 50%);
 
   /* fonts */
-    --poppins: 'Poppins', sans-serif;
+  --Poppins: 'Poppins', sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0.2fr 3fr 0.2fr;
+  grid-template-rows: 0.5fr 3.5fr 5fr 5fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". text-area ."
+    ". form-area ."
+    ". form-area ."
+    ". . .";
+}
+
+.text-area {
+  grid-area: text-area;
+}
+
+.form-area {
+  grid-area: form-area;
 }
