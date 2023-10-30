@@ -2,8 +2,9 @@
 
 Este é um projeto de formulário responsivo no estilo Mobile First, desenvolvido para garantir uma ótima experiência em dispositivos móveis.
 
+<p align="center">
 ![image](https://github.com/ryssaes/formul-rioCadastro/assets/132323833/a619f729-8fd7-4080-8cca-a3bc9557058c)
-
+</p>
 ## Créditos 💡
 
 Este projeto foi inspirado pelo desafio do [Frontend Mentor](https://www.frontendmentor.io/). Frontend Mentor é uma plataforma que fornece desafios de codificação para melhorar suas habilidades de desenvolvimento front-end.
