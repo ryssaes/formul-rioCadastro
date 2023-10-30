@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  /* colors */
-  --Red: hsl(0, 100%, 74%);
-  --Green: hsl(154, 59%, 51%);
-  --DarkGreen: hsl(154, 41%, 50%);
-  --Blue: hsl(248, 32%, 49%);
-  --DarkBlue: hsl(249, 10%, 26%);
-  --GrayishBlue: hsl(246, 25%, 77%);
-  --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
-  --DarkGray: hsl(247, 7%, 50%);
+    /* colors */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --DarkGreen: hsl(154, 41%, 50%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%);
+    --GrayishBlue: hsl(246, 25%, 77%);
+    --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
+    --DarkGray: hsl(247, 7%, 50%);
 
-  /* fonts */
-  --Poppins: 'Poppins', sans-serif;
+     /* fonts */
+    --Poppins: 'Poppins', sans-serif;
 }
 
 body {
-  display: grid;
-  grid-template-columns: 0.2fr 3fr 0.2fr;
-  grid-template-rows: 0.5fr 3.5fr 5fr 5fr 0.5fr;
-  gap: 0px 0px;
-  grid-template-areas:
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 0.2fr;
+    grid-template-rows: 0.5fr 3.5fr 5fr 5fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
     ". . ."
     ". text-area ."
     ". form-area ."
@@ -28,10 +28,17 @@ body {
     ". . .";
 }
 
+body {
+    text-align: center;
+    background-color: var(--Red);
+    font-family: var(--Poppins);
+    font-size: 16px;
+}
+
 .text-area {
-  grid-area: text-area;
+    grid-area: text-area;
 }
 
 .form-area {
-  grid-area: form-area;
+    grid-area: form-area;
 }
