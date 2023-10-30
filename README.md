@@ -2,8 +2,9 @@
 
 Este é um projeto de formulário responsivo no estilo Mobile First, desenvolvido para garantir uma ótima experiência em dispositivos móveis.
 
-![Screenshot](![image](https://github.com/ryssaes/formul-rioCadastro/assets/132323833/8ef3c6b6-830e-46a4-b8b9-2a5fcba3749b)
+![Descrição da Imagem]((https://github.com/ryssaes/formul-rioCadastro/assets/132323833/777b8e7c-1d66-4111-91f0-8f4bc804677a)
 )
+
 
 ## Créditos 💡
 
