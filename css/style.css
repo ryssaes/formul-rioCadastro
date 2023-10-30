@@ -1,45 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-:root {
-    /* colors */
-    --Red: hsl(0, 100%, 74%);
-    --Green: hsl(154, 59%, 51%);
-    --DarkGreen: hsl(154, 41%, 50%);
-    --Blue: hsl(248, 32%, 49%);
-    --DarkBlue: hsl(249, 10%, 26%);
-    --GrayishBlue: hsl(246, 25%, 77%);
-    --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
-    --DarkGray: hsl(247, 7%, 50%);
+    :root {
+        /* colors */
+        --Red: hsl(0, 100%, 74%);
+        --Green: hsl(154, 59%, 51%);
+        --DarkGreen: hsl(154, 41%, 50%);
+        --Blue: hsl(248, 32%, 49%);
+        --DarkBlue: hsl(249, 10%, 26%);
+        --GrayishBlue: hsl(246, 25%, 77%);
+        --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
+        --DarkGray: hsl(247, 7%, 50%);
+    
+      /* fonts */
+        --Poppins: 'Poppins', sans-serif;
+    }
+    
+    body {
+        display: grid;
+        grid-template-columns: 0.2fr 3fr 0.2fr;
+        grid-template-rows: 0.5fr 3.5fr 5fr 5fr 0.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+        ". . ."
+        ". text-area ."
+        ". form-area ."
+        ". form-area ."
+        ". . .";
+    }
+    
+    body {
+        text-align: center;
+        background-color: var(--Red);
+        font-family: var(--Poppins);
+        font-size: 16px;
+    }
+    
+    .text-area {
+        grid-area: text-area;
+        padding: 10px;
+        color: white;
+    }
+    
+    .text-area 
+    p{
+        font-size: 14px;
+    }
+    
+    .form-area
+    .first-p{
+        padding: 23px;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--Blue);
+        color: white;
+        box-shadow: 0 8px var(--DarkBlueTransparent);
+    }
+    
+    .form-area {
+        grid-area: form-area;
+    }
+    
+    .form-container {
+        margin-top: 30px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px var(--DarkBlueTransparent);
+    }
+    
+    .form-container
+    input{
+        width: 100%;
+        height: 4rem;
+        padding: 0 .2rem;
+        outline: none;
+        border: 1px solid var(--DarkBlueTransparent);
+        border-radius: 0.4rem;
+        font-weight: 600;
+        letter-spacing: .8px;
+    }
+    
+    .form-container
+    input::placeholder{
+        color: var(--DarkGray);
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .form-container
+    button[type = submit] {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        padding-left: 20px;
+        outline: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: .5px solid var(--DarkGreen);
+        background-color: var(--Green);
+        box-shadow: 3px 2px var(--DarkGreen);
+    }
+    
+    
+    .form-container
+    p{
+        color: var(--DarkBlueTransparent);
+        font-size: 14px;
+    }
+    
+    .form-container span{
+        color: var(--Red);
+        font-weight: 600;
+    }
 
-     /* fonts */
-    --Poppins: 'Poppins', sans-serif;
-}
-
-body {
-    display: grid;
-    grid-template-columns: 0.2fr 3fr 0.2fr;
-    grid-template-rows: 0.5fr 3.5fr 5fr 5fr 0.5fr;
-    gap: 0px 0px;
-    grid-template-areas:
-    ". . ."
-    ". text-area ."
-    ". form-area ."
-    ". form-area ."
-    ". . .";
-}
-
-body {
-    text-align: center;
-    background-color: var(--Red);
-    font-family: var(--Poppins);
-    font-size: 16px;
-    background-image: url("../images/bg-intro-mobile.png");
-}
-
-.text-area {
-    grid-area: text-area;
-}
-
-.form-area {
-    grid-area: form-area;
-}
