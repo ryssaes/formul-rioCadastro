@@ -15,7 +15,7 @@
         --Poppins: 'Poppins', sans-serif;
     }
     
-    body {
+    .container {
         display: grid;
         grid-template-columns: 0.2fr 3fr 0.2fr;
         grid-template-rows: 0.5fr 3.5fr 5fr 5fr 0.5fr;
@@ -26,6 +26,7 @@
         ". form-area ."
         ". form-area ."
         ". . .";
+        height: 100%;
     }
     
     body {
@@ -47,7 +48,6 @@
         font-size: 14px;
     }
     
-    .form-area
     .first-p{
         padding: 23px;
         border: none;
@@ -55,6 +55,11 @@
         background-color: var(--Blue);
         color: white;
         box-shadow: 0 8px var(--DarkBlueTransparent);
+        cursor: pointer;
+    }
+
+    .first-p:hover{
+        background-color: var(--DarkBlueTransparent);
     }
     
     .form-area {
@@ -69,27 +74,26 @@
         box-shadow: 0 10px var(--DarkBlueTransparent);
     }
     
-    .form-container
-    input{
-        width: 100%;
+    .form-input{
+        color: var(--DarkGray);
+        width: 93%;
         height: 4rem;
-        padding: 0 .2rem;
+        padding: 0 1.2rem;
         outline: none;
         border: 1px solid var(--DarkBlueTransparent);
         border-radius: 0.4rem;
         font-weight: 600;
         letter-spacing: .8px;
     }
-    
-    .form-container
-    input::placeholder{
+
+
+    .form-input::placeholder{
         color: var(--DarkGray);
         font-size: 16px;
         padding: 15px;
     }
     
-    .form-container
-    button[type = submit] {
+    .form-button {
         width: 100%;
         height: 60px;
         margin-bottom: 5px;
@@ -102,17 +106,23 @@
         border: .5px solid var(--DarkGreen);
         background-color: var(--Green);
         box-shadow: 3px 2px var(--DarkGreen);
+        cursor: pointer;
+        transition: all .3s;
     }
-    
-    
-    .form-container
-    p{
+
+    .form-button:hover{
+        background-color: var(--DarkGreen);
+    }
+
+    .form-footer{
         color: var(--DarkBlueTransparent);
         font-size: 14px;
     }
     
-    .form-container span{
+    .form-footer
+    span{
         color: var(--Red);
         font-weight: 600;
+        cursor: pointer;
     }
 
