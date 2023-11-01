@@ -6,6 +6,7 @@
         --Green: hsl(154, 59%, 51%);
         --DarkGreen: hsl(154, 41%, 50%);
         --Blue: hsl(248, 32%, 49%);
+        --Bluehover: hsl(248, 30%, 47%);
         --DarkBlue: hsl(249, 10%, 26%);
         --GrayishBlue: hsl(246, 25%, 77%);
         --DarkBlueTransparent: hsl(249, 10%, 26%, 0.3);
@@ -57,10 +58,11 @@
         color: white;
         box-shadow: 0 8px var(--DarkBlueTransparent);
         cursor: pointer;
+        transition: all 0.3s;
     }
 
     .first-p:hover{
-        background-color: var(--DarkBlueTransparent);
+        background-color: var(--Bluehover);
     }
     
     .form-area {
