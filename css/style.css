@@ -133,8 +133,8 @@
 
     .container {
         display: grid;
-        grid-template-columns: 2fr 2fr 2fr 0.5fr 2fr 2fr 2fr;
-        grid-template-rows: 1fr 2fr 2fr 1fr 2fr 2fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr .5fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
         ". . . . . . ."
@@ -150,5 +150,9 @@
         align-items: center;
         justify-content: start;
         text-align: left;
+    }
+
+    .form-input{
+        width: 90%;
     }
  }
