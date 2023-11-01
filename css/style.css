@@ -126,3 +126,29 @@
         cursor: pointer;
     }
 
+ @media screen and (min-width: 1200px){
+    body{
+        background-image: url("../images/bg-intro-desktop.png");
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 0.5fr 2fr 2fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr 2fr 2fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+        ". . . . . . ."
+        ". text-area text-area . form-area form-area ."
+        ". text-area text-area . form-area form-area ."
+        ". text-area text-area . form-area form-area ."
+        ". . . . . . .";
+        height: 100%;
+    }
+
+    .text-area{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        text-align: left;
+    }
+ }
