@@ -41,11 +41,12 @@
         grid-area: text-area;
         padding: 10px;
         color: white;
+        font-size: 20px;
     }
     
     .text-area 
     p{
-        font-size: 14px;
+        font-size: 16px;
     }
     
     .first-p{
@@ -133,7 +134,7 @@
 
     .container {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr .5fr 1fr 1fr 2fr;
+        grid-template-columns: .7fr .5fr 1fr .5fr 1fr .8fr .7fr;
         grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
