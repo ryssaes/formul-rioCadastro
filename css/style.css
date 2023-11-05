@@ -29,7 +29,7 @@
         ". . .";
         height: 100%;
     }
-    
+
     body {
         text-align: center;
         background-color: var(--Red);
@@ -37,7 +37,7 @@
         font-size: 16px;
         background-image: url("../images/bg-intro-mobile.png");
     }
-    
+
     .text-area {
         grid-area: text-area;
         padding: 10px;
@@ -70,32 +70,70 @@
     }
     
     .form-container {
-        margin-top: 30px;
         background-color: white;
         padding: 30px;
         border-radius: 15px;
-        box-shadow: 0 10px var(--DarkBlueTransparent);
+        box-shadow: 0 8px var(--DarkBlueTransparent);
     }
-    
-    .form-input{
-        color: var(--DarkGray);
-        width: 93%;
-        height: 4rem;
-        padding: 0 1.2rem;
-        outline: none;
-        border: 1px solid var(--DarkBlueTransparent);
-        border-radius: 0.4rem;
-        font-weight: 600;
-        letter-spacing: .8px;
+    .field-group {
+        position: relative;
+        margin-bottom: 25px;
     }
 
-
-    .form-input::placeholder{
-        color: var(--DarkGray);
-        font-size: 16px;
-        padding: 15px;
+    label {
+        display: none;
     }
-    
+
+    input {
+	width: 93%;
+	height: 60px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	border: 1.3px solid var(--DarkBlueTransparent);
+	padding-left: 20px;
+	outline: none;
+	color: hsl(249, 10%, 26%);
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+input:focus {
+	border: 1.5px solid var(--Blue);
+}
+
+input::placeholder {
+	color: var(--DarkGray);
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.error-text, 
+.error-icon{
+    display: none;
+}
+
+.error-text {
+	text-align: right;
+	bottom: 0;
+	right: 0;
+	font-size: .8rem;
+	font-style: italic;
+	color: var(--Red);
+	font-weight: 500;
+}
+.error-icon {
+	position: absolute;
+	right: 20px;
+	top: 20%;
+}
+.field-group.error .error-text,
+.field-group.error .error-icon {
+	display: block;
+}
+.field-group.error input {
+	border: 2px solid var(--Red);
+}
+
     .form-button {
         width: 100%;
         height: 60px;
@@ -154,8 +192,8 @@
         justify-content: start;
         text-align: left;
     }
+}
 
-    .form-input{
-        width: 90%;
-    }
- }
+.error-icon {
+	right: 40px;
+}
