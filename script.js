@@ -1,13 +1,56 @@
-const form = document.querySelector('.form-container form');
-const inputs = document.querySelectorAll('.field-group input')
+const form = document.getElementById('form');
+const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    inputs.forEach(inputs =>{
-        if(!inputs.value){
-            inputs.parentElement.classList.add('error');
-        }else{
-            inputs.parentElement.classList.remove('error');
-        }
-    })
+    checkInputs();
 });
+
+function checkInputs(){
+    const firstnameValue = firstname.value.trim(); 
+    const lastnameValue = lastname.value.trim();   
+    const emailValue = email.value.trim();        
+    const passwordValue = password.value.trim();   
+
+    if(firstnameValue === ''){
+        errorValidation(firstname, 'First Name cannot be empty');
+    } else if (firstnameValue.length < 3) {
+        errorValidation(firstname, 'First Name must have at least 3 characters');
+    }
+
+    if(lastnameValue === ''){
+        errorValidation(lastname, 'Last Name cannot be empty');
+    } else if (lastnameValue.length < 3) {
+        errorValidation(lastname, 'Last Name must have at least 3 characters');
+    }
+
+    if(emailValue === ''){
+        errorValidation(email, 'Email Address cannot be empty');
+    } else if (!isValidEmail(emailValue)) {
+        errorValidation(email, 'Looks like this is not a valid email');
+    }
+
+    if(passwordValue === ''){
+        errorValidation(password, 'Password cannot be empty');
+    } else if (passwordValue.length < 8) {
+        errorValidation(password, 'Password must have at least 8 characters');
+    } else if (!/[A-Z]/.test(passwordValue)) {
+        errorValidation(password, 'Password must contain at least one uppercase letter');
+    }
+}
+
+function errorValidation(input, message){
+    const formControl = input.parentElement;
+    const p = formControl.querySelector('.error-text');
+
+    p.innerText = message;
+    formControl.classList.add('error');
+}
+
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
